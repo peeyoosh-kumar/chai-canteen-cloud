@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIT Chai Canteen Billing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>☕ DIT Chai Canteen</h1>
+    <p>Fresh, hot and affordable</p>
+  </header>
+
+  <nav>
+    <a href="#menu">Menu</a>
+    <a href="#cart">Cart</a>
+    <a href="#bill">Bill</a>
+  </nav>
+
+  <main>
+    <section id="menu">
+      <h2>Menu</h2>
+      <div id="menu-items" class="menu-grid"></div>
+    </section>
+
+    <section id="cart">
+      <h2>Your Order</h2>
+      <form id="customer-form">
+        <label for="customer-name">Customer Name:</label>
+        <input type="text" id="customer-name" placeholder="Enter your name" required>
+      </form>
+      <ul id="cart-list"></ul>
+      <p id="empty-msg">Your cart is empty.</p>
+    </section>
+
+    <section id="bill">
+      <h2>Bill</h2>
+      <p>Subtotal: ₹<span id="subtotal">0</span></p>
+      <p>GST (5%): ₹<span id="gst">0</span></p>
+      <h3>Total: ₹<span id="total">0</span></h3>
+      <button id="clear-btn">Clear Cart</button>
+      <button id="print-btn">Print Bill</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made by Peeyoosh Kumar | DIT University</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
