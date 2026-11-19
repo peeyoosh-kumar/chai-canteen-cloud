@@ -24,6 +24,10 @@ jobs:
       - name: Build Docker image
         run: docker build -t chai-canteen:ci .
 
+      - name: Scan Docker image with Trivy
+        run: |
+          docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:0.69.3 image --severity HIGH,CRITICAL --exit-code 0 chai-canteen:ci
+
   deploy:
     needs: build-docker
     runs-on: ubuntu-latest
